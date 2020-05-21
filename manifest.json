@@ -1,0 +1,19 @@
+{
+  "name": "Song Link link",
+  "description": "Add song.link link to the clipboard",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab",
+	"*://*.song.link/*",
+	"*://*.yandex.ru/*",
+	"*://*.youtube.com/*"
+  ],
+  "browser_action": {
+      "default_title": "Add song.link link to the clipboard"
+  },
+  "manifest_version": 2
+}
