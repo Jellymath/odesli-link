@@ -37,10 +37,11 @@ const generateOdesliLink = tabUrl => {
         regexToLink(/.*music.yandex.ru\/album\/[0-9]+\/track\/([0-9]+)/, id => `song.link/ya/${id}`),
         regexToLink(/.*music.yandex.ru\/album\/([0-9]+)/, id => `album.link/ya/${id}`),
 
+        // Youtube and Youtube Music share the same link format, so this block should work for both of them
+        regexToLink(/.*youtube.com\/playlist\?list=(.+)/, id => `album.link/y/${id}`),
+        regexToLink(/.*youtube.com\/watch\?v=([^&]+)/, id => `song.link/y/${id}`),
         // doesn't work at the moment (both quick link and sending it to the api)
         // regexToLink(/.*music.youtube.com\/browse\/(.+)/, id => `album.link/y/${id}`),
-        regexToLink(/.*music.youtube.com\/playlist\?list=(.+)/, id => `album.link/y/${id}`),
-        regexToLink(/.*music.youtube.com\/watch\?v=([^&]+)/, id => `song.link/y/${id}`),
 
         regexToLink(/.*deezer.com\/[a-z]{2,4}\/album\/([0-9]+)/, id => `album.link/d/${id}`),
         regexToLink(/.*deezer.com\/[a-z]{2,4}\/track\/([0-9]+)/, id => `song.link/d/${id}`),
