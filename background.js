@@ -53,7 +53,15 @@ const generateOdesliLink = tabUrl => {
         regexToLink(/.*open.spotify.com\/album\/(?:[^?]+)\?highlight=spotify:track:([^&]+)/, id => `song.link/s/${id}`),
         regexToLink(/.*open.spotify.com\/album\/([^?]+)/, id => `album.link/s/${id}`),
         // pretty hard to obtain link in the moment via extension, but added to be consistent
-        regexToLink(/.*open.spotify.com\/track\/([^?]+)/, id => `song.link/s/${id}`)
+        regexToLink(/.*open.spotify.com\/track\/([^?]+)/, id => `song.link/s/${id}`),
+
+        regexToLink(/.*music.apple.com\/[^\/]+\/album\/[^\/]+\/(?:[0-9]+)\?i=([0-9]+)/, id => `song.link/i/${id}`),
+        regexToLink(/.*music.apple.com\/[^\/]+\/album\/[^\/]+\/([0-9]+)/, id => `album.link/i/${id}`),
+
+        regexToLink(/.*listen.tidal.com\/album\/[0-9]+\/track\/([0-9]+)/, id => `song.link/t/${id}`),
+        regexToLink(/.*tidal.com\/browse\/track\/([0-9]+)/, id => `song.link/t/${id}`),
+        regexToLink(/.*listen.tidal.com\/album\/([0-9]+)/, id => `album.link/t/${id}`),
+        regexToLink(/.*tidal.com\/browse\/album\/([0-9]+)/, id => `album.link/t/${id}`),
 
     ];
 

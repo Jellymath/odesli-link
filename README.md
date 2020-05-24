@@ -25,6 +25,8 @@ Legend:
 
 ✔ - Quick link generation supported
 
+✔* - Quick link generation supported, but link is kinda hard to obtain (example: Click "Share", choose "Copy Link", open link) 
+
 👌 - Link generation supported by Odesli API (can be a bit slow)
 
 ❔ - No known way to have the related page url 
@@ -39,4 +41,6 @@ Legend:
 | Deezer            | ✔    | ✔     |
 | SoundCloud        | 👌    | 👌    |
 | Yandex.Music      | ✔    | ✔    |
+| Apple Music       | ✔*   | ✔    |
+| TIDAL             | ✔    | ✔    |
 
