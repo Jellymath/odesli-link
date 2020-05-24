@@ -29,11 +29,15 @@ const copyToClipboard = text => {
 const generateOdesliLink = tabUrl => {
     const regexToLink = (regex, idToLink) => ({regex, idToLink});
     const regexToLinkList = [
-        regexToLink(/.*music.yandex.ru\/album\/[0-9]+\/track\/([0-9]+)\/?/, id => `song.link/ya/${id}`),
-        regexToLink(/.*music.yandex.ru\/album\/([0-9]+)\/?/, id => `album.link/ya/${id}`),
+        regexToLink(/.*music.yandex.ru\/album\/[0-9]+\/track\/([0-9]+)/, id => `song.link/ya/${id}`),
+        regexToLink(/.*music.yandex.ru\/album\/([0-9]+)/, id => `album.link/ya/${id}`),
+
         // regexToLink(/.*music.youtube.com\/browse\/(.+)/, id => `album.link/y/${id}`),
         regexToLink(/.*music.youtube.com\/playlist\?list=(.+)/, id => `album.link/y/${id}`),
         regexToLink(/.*music.youtube.com\/watch\?v=([^&]+)/, id => `song.link/y/${id}`),
+
+        regexToLink(/.*deezer.com\/[a-z]{2,4}\/album\/([0-9]+)/, id => `album.link/d/${id}`),
+        regexToLink(/.*deezer.com\/[a-z]{2,4}\/track\/([0-9]+)/, id => `song.link/d/${id}`)
     ];
 
     let result;

@@ -8,9 +8,7 @@
   },
   "permissions": [
     "activeTab",
-	"*://*.song.link/*",
-	"*://*.yandex.ru/*",
-	"*://*.youtube.com/*"
+	"*://*.song.link/*"
   ],
   "browser_action": {
       "default_title": "Add song.link link to the clipboard"
