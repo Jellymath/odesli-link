@@ -1,6 +1,6 @@
 {
-  "name": "Song Link link",
-  "description": "Add song.link link to the clipboard",
+  "name": "Odesli Link",
+  "description": "Add Odesli link (song.link, album.link) to the clipboard",
   "version": "1.0",
   "background": {
     "scripts": ["background.js"],
@@ -11,7 +11,13 @@
 	"*://*.song.link/*"
   ],
   "browser_action": {
-      "default_title": "Add song.link link to the clipboard"
+      "default_title": "Copy Odesli link"
+  },
+  "icons": {
+    "16": "icons/odesli_16.png",
+    "32": "icons/odesli_32.png",
+    "48": "icons/odesli_48.png",
+    "128": "icons/odesli_128_scaled.png"
   },
   "manifest_version": 2
 }
