@@ -2,8 +2,9 @@
 Chrome Extension to generate Odesli link (song.link/album.link) for the current tab
 
 ## How to install
-Extension is not available via Chrome Web Store (or other stores) at the moment.
-However, it can be installed manually.
+Extension is available via Chrome Web Store - https://chrome.google.com/webstore/detail/odesli-link/ibdbmfooophklejilghomfoilbilmlnc
+
+Also it can be installed manually.
 1. Download the source code
 2. Go to browser extensions page (chrome://extensions/, brave://extensions/ etc)
 3. Turn on Developer Mode
